@@ -1,0 +1,31 @@
+<h1>Listing ghosts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nickname</th>
+      <th>Favourite thing</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ghosts.each do |ghost| %>
+      <tr>
+        <td><%= ghost.name %></td>
+        <td><%= ghost.nickname %></td>
+        <td><%= ghost.favourite_thing %></td>
+        <td><%= link_to 'Show', ghost %></td>
+        <td><%= link_to 'Edit', edit_ghost_path(ghost) %></td>
+        <td><%= link_to 'Destroy', ghost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ghost', new_ghost_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ghost.name %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @ghost.nickname %>
+</p>
+
+<p>
+  <strong>Favourite thing:</strong>
+  <%= @ghost.favourite_thing %>
+</p>
+
+<%= link_to 'Edit', edit_ghost_path(@ghost) %> |
+<%= link_to 'Back', ghosts_path %>
