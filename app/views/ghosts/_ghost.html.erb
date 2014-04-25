@@ -1,0 +1,17 @@
+<div class="ghost <%= ghost.name.downcase %>">
+  <div class="eyes">
+    <div class="eye leftEye"><div class="iris"></div></div>
+    <div class="eye rightEye"><div class="iris"></div></div>
+  </div>
+  <div class="ghostTail"></div>
+</div>
+
+<div>
+  <h3><%= ghost.name %></h3>
+  <p>Nickname: <%= ghost.nickname %></p>
+  <p>Favourite Thing: <%= ghost.favourite_thing %></p>
+  <p>
+    <%= link_to 'Edit', edit_ghost_path(ghost) %> - 
+    <%= link_to 'Destroy', ghost, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>

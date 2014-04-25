@@ -69,6 +69,6 @@ class GhostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ghost_params
-      params.require(:ghost).permit(:name, :nickname, :favourite_thing)
+      params.require(:ghost).permit(:name, :nickname, :favourite_thing, :colour)
     end
 end
